@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navigation from 'Navigation';
 
 const Main = props => {
 
@@ -6,6 +7,7 @@ const Main = props => {
     <div>
       <div>
         <div>
+          <Navigation />
           <p>Main.jsx Rendered</p>
           {props.children}
         </div>
