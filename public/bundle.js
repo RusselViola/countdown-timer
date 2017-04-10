@@ -111,11 +111,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//load foundation
-	__webpack_require__(230);
+	__webpack_require__(231);
 	$(document).foundation();
 
 	//App css
-	__webpack_require__(234);
+	__webpack_require__(235);
 
 	console.log(process.env.ENV_TEST);
 
@@ -25492,6 +25492,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Navigation = __webpack_require__(230);
+
+	var _Navigation2 = _interopRequireDefault(_Navigation);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Main = function Main(props) {
@@ -25505,6 +25509,7 @@
 	      _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement(_Navigation2.default, null),
 	        _react2.default.createElement(
 	          'p',
 	          null,
@@ -25521,13 +25526,90 @@
 /* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(9);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(166);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Navigation = function Navigation(props) {
+
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'top-bar' },
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'top-bar-left' },
+	      _react2.default.createElement(
+	        'ul',
+	        { className: 'menu' },
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'menu-text' },
+	          'Countdown-Timer'
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: '' },
+	          _react2.default.createElement(
+	            _reactRouter.IndexLink,
+	            { to: '/', activeClassName: 'active-link' },
+	            'Timer'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: '' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/', activeClassName: '/' },
+	            'Countdown'
+	          )
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'top-bar-right' },
+	      _react2.default.createElement(
+	        'ul',
+	        { className: 'menu' },
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'menu-text' },
+	          'Created By ',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://github.com/RusselViola', target: '_blank' },
+	            'Russel Viola'
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+	exports.default = Navigation;
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(231);
+	var content = __webpack_require__(232);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(233)(content, {});
+	var update = __webpack_require__(234)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -25544,10 +25626,10 @@
 	}
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(232)();
+	exports = module.exports = __webpack_require__(233)();
 	// imports
 
 
@@ -25558,7 +25640,7 @@
 
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports) {
 
 	/*
@@ -25614,7 +25696,7 @@
 
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -25866,16 +25948,16 @@
 
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(235);
+	var content = __webpack_require__(236);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(233)(content, {});
+	var update = __webpack_require__(234)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -25892,10 +25974,10 @@
 	}
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(232)();
+	exports = module.exports = __webpack_require__(233)();
 	// imports
 
 
