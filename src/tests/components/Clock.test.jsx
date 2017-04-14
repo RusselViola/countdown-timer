@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Clock from 'Clock';
+
 const expect = require('expect');
 const $ = require('jQuery');
 const TestUtils = require('react-addons-test-utils');
-import Clock from 'Clock';
 
 describe('Clock', () => {
   it('should exist', () => {
