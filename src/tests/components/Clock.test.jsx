@@ -18,6 +18,15 @@ describe('Clock', () => {
       let actual = clock.formatSeconds(seconds);
 
       expect(actual).toBe(expected);
-    })
+    });
+
+    it('should format seconds when min/sec are less than 10', () => {
+      let clock = TestUtils.renderIntoDocument(<Clock/>);
+      let seconds = 61;
+      let expected = '01:01';
+      let actual = clock.formatSeconds(seconds);
+
+      expect(actual).toBe(expected);
+    });
   });
 });
