@@ -25611,7 +25611,6 @@
 	};
 
 	exports.default = Navigation;
-	t;
 
 /***/ },
 /* 231 */
