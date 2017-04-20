@@ -8,10 +8,10 @@ export default class Countdown extends Component {
     this.state = {
       count: 0
     };
-    this.handleSetCountDown = this.handleSetCountDown.bind(this);
+    this.handleSetCountdown = this.handleSetCountdown.bind(this);
   }
 
-  handleSetCountDown(seconds) {
+  handleSetCountdown(seconds) {
     this.setState({
       count: seconds
     });

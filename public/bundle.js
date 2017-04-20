@@ -25708,13 +25708,13 @@
 	    _this.state = {
 	      count: 0
 	    };
-	    _this.handleSetCountDown = _this.handleSetCountDown.bind(_this);
+	    _this.handleSetCountdown = _this.handleSetCountdown.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(Countdown, [{
-	    key: 'handleSetCountDown',
-	    value: function handleSetCountDown(seconds) {
+	    key: 'handleSetCountdown',
+	    value: function handleSetCountdown(seconds) {
 	      this.setState({
 	        count: seconds
 	      });
@@ -25856,7 +25856,6 @@
 	    value: function onSubmit(e) {
 	      e.preventDefault();
 	      var strSeconds = this.refs.seconds.value;
-
 	      if (strSeconds.match(/^[0-9]*$/)) {
 	        this.refs.seconds.value = '';
 	        this.props.onSetCountdown(parseInt(strSeconds, 10));
@@ -25870,7 +25869,7 @@
 	        null,
 	        _react2.default.createElement(
 	          'form',
-	          { ref: 'form', onSubmit: this.onSubmit, className: 'countdown-form' },
+	          { ref: 'form', onSubmit: this.onSubmit.bind(this), className: 'countdown-form' },
 	          _react2.default.createElement('input', { type: 'text', ref: 'seconds', placeholder: 'Enter time in seconds' }),
 	          _react2.default.createElement(
 	            'button',
