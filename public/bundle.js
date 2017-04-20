@@ -25516,18 +25516,13 @@
 	  return _react2.default.createElement(
 	    'div',
 	    null,
+	    _react2.default.createElement(_Navigation2.default, null),
 	    _react2.default.createElement(
 	      'div',
-	      null,
+	      { className: 'row' },
 	      _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement(_Navigation2.default, null),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'Main.jsx Rendered'
-	        ),
+	        { className: 'column small-centered medium-6 large-4' },
 	        props.children
 	      )
 	    )
