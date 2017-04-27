@@ -17,7 +17,7 @@ export default class Controls extends Component {
     }
     return (
       <div className="controls">
-        {renderStartStopButton}
+        {renderStartStopButton()}
         <button className="button alert hollow">Clear</button>
       </div>
     )

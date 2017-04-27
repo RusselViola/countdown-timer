@@ -10,4 +10,14 @@ describe('Controls', () => {
   it('should exist', () => {
     expect(Controls).toExist;
   })
+
+  describe('render', () => {
+    it('should render pause when started', () => {
+      let controls = TestUtils.renderIntoDocument(<Controls countdownStatus="started"/>);
+      let $el = $(ReactDOM.findDOMNode(controls));
+      let $pauseButton = $el.find('button:contains(Pause)');
+
+      expect($pauseButton.length).toBe(1);
+    })
+  })
 })
