@@ -19,5 +19,12 @@ describe('Controls', () => {
 
       expect($pauseButton.length).toBe(1);
     })
+    it('should render start when paused', () => {
+      let controls = TestUtils.renderIntoDocument(<Controls countdownStatus="paused"/>);
+      let $el = $(ReactDOM.findDOMNode(controls));
+      let $pauseButton = $el.find('button:contains(Start)');
+
+      expect($pauseButton.length).toBe(1);
+    })
   })
 })
