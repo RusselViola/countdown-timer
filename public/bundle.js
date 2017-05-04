@@ -25731,6 +25731,11 @@
 	      }
 	    }
 	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      console.log('unmount');
+	    }
+	  }, {
 	    key: 'startTimer',
 	    value: function startTimer() {
 	      var _this2 = this;

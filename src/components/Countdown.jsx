@@ -30,6 +30,10 @@ export default class Countdown extends Component {
     }
   }
 
+  componentWillUnmount() {
+    console.log('unmount');
+  }
+
   startTimer() {
     this.timer = setInterval(() => {
       let newCount = this.state.count - 1;
