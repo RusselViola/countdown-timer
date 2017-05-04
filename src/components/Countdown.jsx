@@ -66,6 +66,7 @@ export default class Countdown extends Component {
     }
     return (
       <div>
+        <h1 className="page-title">Count It Down!</h1>
         <Clock totalSeconds={count}/>
         {renderControlArea()}
       </div>
