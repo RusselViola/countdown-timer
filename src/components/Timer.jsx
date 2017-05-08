@@ -6,18 +6,23 @@ export default class Timer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+      count: 0,
+      timerStatus: 'stopped'
     };
+  }
+
+  handleStatusChange(newTimerStatus) {
+    console.log(newTimerStatus);
   }
 
 
   render() {
-    let {count} = this.state;
+    let {count, timerStatus} = this.state;
     return (
       <div>
         <h1 className="page-title">Time That Shit!</h1>
         <Clock totalSeconds={count}/>
-        <Controls />
+        <Controls countdownStatus={timerStatus} onStatusChange={this.handleStatusChange}/>
       </div>
     )
   }

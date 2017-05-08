@@ -25648,15 +25648,23 @@
 	    var _this = _possibleConstructorReturn(this, (Timer.__proto__ || Object.getPrototypeOf(Timer)).call(this, props));
 
 	    _this.state = {
-	      count: 0
+	      count: 0,
+	      timerStatus: 'stopped'
 	    };
 	    return _this;
 	  }
 
 	  _createClass(Timer, [{
+	    key: 'handleStatusChange',
+	    value: function handleStatusChange(newTimerStatus) {
+	      console.log(newTimerStatus);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var count = this.state.count;
+	      var _state = this.state,
+	          count = _state.count,
+	          timerStatus = _state.timerStatus;
 
 	      return _react2.default.createElement(
 	        'div',
@@ -25667,7 +25675,7 @@
 	          'Time That Shit!'
 	        ),
 	        _react2.default.createElement(_Clock2.default, { totalSeconds: count }),
-	        _react2.default.createElement(_Controls2.default, null)
+	        _react2.default.createElement(_Controls2.default, { countdownStatus: timerStatus, onStatusChange: this.handleStatusChange })
 	      );
 	    }
 	  }]);
@@ -25811,7 +25819,7 @@
 	            { className: 'button secondary', onClick: _this3.onStatusChange('paused') },
 	            'Pause'
 	          );
-	        } else if (countdownStatus === 'paused') {
+	        } else {
 	          return _react2.default.createElement(
 	            'button',
 	            { className: 'button primary', onClick: _this3.onStatusChange('started') },
