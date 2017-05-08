@@ -52,7 +52,7 @@ export default class Timer extends Component {
     let {count, timerStatus} = this.state;
     return (
       <div>
-        <h1 className="page-title">Time That Shit!</h1>
+        <h1 className="page-title">Count it UP, YO!</h1>
         <Clock totalSeconds={count}/>
         <Controls countdownStatus={timerStatus} onStatusChange={this.handleStatusChange}/>
       </div>
