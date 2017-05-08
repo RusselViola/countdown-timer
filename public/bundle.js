@@ -25651,13 +25651,50 @@
 	      count: 0,
 	      timerStatus: 'stopped'
 	    };
+	    _this.handleStart = _this.handleStart.bind(_this);
+	    _this.handleStatusChange = _this.handleStatusChange.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(Timer, [{
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps, prevState) {
+	      if (this.state.timerStatus !== prevState.timerStatus) {
+	        switch (this.state.timerStatus) {
+	          case 'started':
+	            this.handleStart();
+	            break;
+	          case 'stopped':
+	            this.setState({ count: 0 });
+	          case 'paused':
+	            clearInterval(this.timer);
+	            this.timer = undefined;
+	            break;
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.timer);
+	    }
+	  }, {
+	    key: 'handleStart',
+	    value: function handleStart() {
+	      var _this2 = this;
+
+	      this.timer = setInterval(function () {
+	        _this2.setState({
+	          count: _this2.state.count + 1
+	        });
+	      }, 1000);
+	    }
+	  }, {
 	    key: 'handleStatusChange',
 	    value: function handleStatusChange(newTimerStatus) {
-	      console.log(newTimerStatus);
+	      this.setState({
+	        timerStatus: newTimerStatus
+	      });
 	    }
 	  }, {
 	    key: 'render',
