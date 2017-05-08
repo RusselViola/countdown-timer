@@ -25709,7 +25709,7 @@
 	        _react2.default.createElement(
 	          'h1',
 	          { className: 'page-title' },
-	          'Time That Shit!'
+	          'Count it UP, YO!'
 	        ),
 	        _react2.default.createElement(_Clock2.default, { totalSeconds: count }),
 	        _react2.default.createElement(_Controls2.default, { countdownStatus: timerStatus, onStatusChange: this.handleStatusChange })
